@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About Me - Ronaldo Rosas</title>
-  <meta name="author" content="Ronaldo Rosas">
+  <title>Ronaldo Rosas | Data Analyst</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover who Ronaldo Rosas is by learning a bit about his personality and skills, along with why he wants to work for American Airlines.">
-
+  <meta name="description" content="Professional website of Ronaldo Rosas, data analyst with a passion for global connectivity and travel.">
   <style>
     :root {
       --aa-blue: #0078D2;
@@ -15,42 +13,31 @@
       --aa-dark: #1a1a1a;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      color: var(--aa-dark);
-      line-height: 1.6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: var(--aa-light);
+      color: var(--aa-dark);
       background-image: repeating-linear-gradient(
         45deg,
-        rgba(0, 120, 210, 0.15) 0,
-        rgba(0, 120, 210, 0.15) 10px,
-        rgba(218, 41, 28, 0.15) 10px,
-        rgba(218, 41, 28, 0.15) 20px,
-        rgba(255, 255, 255, 0.15) 20px,
-        rgba(255, 255, 255, 0.15) 30px
+        rgba(0, 120, 210, 0.2) 0,
+        rgba(0, 120, 210, 0.2) 10px,
+        rgba(218, 41, 28, 0.2) 10px,
+        rgba(218, 41, 28, 0.2) 20px,
+        rgba(255, 255, 255, 0.2) 20px,
+        rgba(255, 255, 255, 0.2) 30px
       );
-      background-size: 30px 30px;
       background-attachment: fixed;
-      padding: 0 20px;
     }
 
-    .banner {
-      background: linear-gradient(90deg, #0078D2, #003e7e);
+    header {
+      background: linear-gradient(90deg, var(--aa-blue), #003e7e);
       color: white;
-      padding: 30px 20px;
+      padding: 40px 20px;
       text-align: center;
-      font-size: 1.8em;
-      font-weight: bold;
-      letter-spacing: 1px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .navbar {
+    nav {
       background-color: white;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       position: sticky;
@@ -58,124 +45,77 @@
       z-index: 1000;
     }
 
-    .navbar ul {
+    nav ul {
       list-style: none;
       margin: 0;
-      padding: 10px 0;
+      padding: 10px;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
     }
 
-    .navbar li {
+    nav li {
       margin: 0 15px;
     }
 
-    .navbar a {
+    nav a {
       text-decoration: none;
       color: var(--aa-blue);
       font-weight: bold;
-      padding: 8px 10px;
-      transition: color 0.3s, border-bottom 0.3s;
+      transition: 0.3s;
     }
 
-    .navbar a:hover {
+    nav a:hover {
       color: var(--aa-red);
-      border-bottom: 2px solid var(--aa-red);
     }
 
-    h2.section-title {
-      color: white;
-      background: linear-gradient(90deg, var(--aa-blue), var(--aa-red));
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-size: 1.4em;
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      background: white;
+      margin-bottom: 40px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .section h2 {
+      color: var(--aa-blue);
       margin-bottom: 20px;
     }
 
-    img {
+    .profile-img {
       display: block;
       margin: 20px auto;
       border-radius: 100px;
-      width: 180px;
+      width: 160px;
       border: 4px solid var(--aa-blue);
     }
 
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-      border-top: 4px solid var(--aa-blue);
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    ul ul {
-      padding-left: 20px;
-    }
-
-    a {
-      color: var(--aa-red);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    button {
+    .resume-button {
       background-color: var(--aa-red);
       color: white;
+      padding: 12px 20px;
       border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
+      border-radius: 5px;
+      text-decoration: none;
       font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s;
+      display: inline-block;
     }
 
-    button:hover {
+    .resume-button:hover {
       background-color: #b51f17;
     }
 
-    .video-container {
-      position: relative;
+    iframe {
       width: 100%;
-      max-width: 720px;
-      padding-top: 56.25%;
-      margin: 0 auto 40px;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      overflow: hidden;
-      background-color: #000;
-    }
-
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    .flight-map-container {
-      max-width: 100%;
-      margin: 60px auto 40px;
-      padding: 10px;
-      text-align: center;
-    }
-
-    .flight-map-container iframe {
-      border: 4px solid var(--aa-blue);
+      height: 400px;
       border-radius: 10px;
-      width: 100%;
-      height: 600px;
+      border: 4px solid var(--aa-blue);
     }
 
     footer {
@@ -184,133 +124,96 @@
       color: white;
       font-size: 0.9em;
       padding: 20px;
-      margin-top: 60px;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Ronaldo Rosas</h1>
+    <p>Data Analyst | Global Thinker | American Airlines Enthusiast</p>
+  </header>
 
-  <div class="banner">
-    <h1>Welcome to Ronaldo's Page :)</h1>
-  </div>
-
-  <nav class="navbar">
+  <nav>
     <ul>
-      <li><a href="#description">Description</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#favorites">Favorites</a></li>
-      <li><a href="#why-aa">Why AA</a></li>
       <li><a href="#resume">Resume</a></li>
-      <li><a href="#goals">Goals</a></li>
-      <li><a href="#comedy">Comedy</a></li>
+      <li><a href="#aa">Why AA</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <h2 style="text-align: center; color: #0078D2; margin-top: 40px;">Who is Ronaldo?</h2>
-  <img src="website_face_pic.jpg" alt="Picture of Ronaldo Rosas" title="Yours truly">
+  <div class="container">
+    <section class="section" id="about">
+      <h2>About Me</h2>
+      <img src="website_face_pic.jpg" alt="Ronaldo Rosas" class="profile-img">
+      <p>Howdy! I'm Ronaldo Rosas, a data analyst passionate about aviation, travel, and cultural exploration. With a background in business analytics, consulting, and international engagement, I aim to contribute to organizations that connect the world, like American Airlines.</p>
+    </section>
 
-  <section id="description">
-    <h2 class="section-title">Description</h2>
-    <ul>
-      <li>6'3"... on a good day</li>
-      <li><big>Muscles</big> and hustles</li>
-      <li><b>Dark</b> humor aficionado</li>
-      <li>Amateur professional eater</li>
-      <li>Has his mother's heart but his father's mouth</li>
-      <li>Operates primarily on creatine and sarcasm</li>
-      <li>Once answered a final jeopardy correctly</li>
-      <li>In <mark>debt</mark> :)</li>
-    </ul>
-  </section>
+    <section class="section" id="experience">
+      <h2>Professional Experience</h2>
+      <h3>Elgin USA – Data Analyst & Strategy Consultant</h3>
+      <p><em>Arlington, TX | Jan 2025 – Apr 2025</em></p>
+      <ul>
+        <li>Analyzed product sales and revenue trends using Excel and SQL</li>
+        <li>Built Tableau dashboards to inform executive decisions</li>
+        <li>Performed market and competitor analysis using Python and web scraping</li>
+        <li>Transformed data into actionable strategic recommendations</li>
+      </ul>
+      <h3>Tealstone Residential Construction – Crew Supervisor</h3>
+      <p><em>Denton, TX | Jan 2023 – May 2024</em></p>
+      <ul>
+        <li>Led a 5-person construction crew and ensured project compliance</li>
+        <li>Acted as bilingual liaison for improved team communication</li>
+        <li>Reduced material waste through operational improvements</li>
+      </ul>
+      <h3>Fundación Mi Parque – Urban Planning Intern</h3>
+      <p><em>Santiago, Chile | Jul 2022 – Aug 2022</em></p>
+      <ul>
+        <li>Conducted environmental data analysis to support project design</li>
+        <li>Facilitated community workshops and gathered stakeholder feedback</li>
+        <li>Translated marketing materials from Spanish to English</li>
+      </ul>
+    </section>
 
-  <section id="skills">
-    <h2 class="section-title">Skillz</h2>
-    <ul>
-      <li>Sage level knowledge of random geography facts
-        <ul><li>e.g. the southernmost landlocked country is Lesotho</li></ul>
-      </li>
-      <li>Repetitive knuckle popping</li>
-      <li>Expert Pecan sheller</li>
-      <li>Can read and write in <ins>Korean</ins>
-        <ul><li>농담이 아니야</li></ul>
-      </li>
-      <li>Wet mid-range jumper</li>
-      <li>Subpar runner</li>
-      <li>Always willing to <b>learn</b></li>
-    </ul>
-  </section>
+    <section class="section" id="skills">
+      <h2>Skills & Interests</h2>
+      <ul>
+        <li><strong>Data Tools:</strong> SQL, Python, Excel, Tableau, HTML, CSS, JSON, GenAI</li>
+        <li><strong>Languages:</strong> English (Fluent), Spanish (Native)</li>
+        <li><strong>Soft Skills:</strong> Communication, Time Management, Leadership</li>
+        <li><strong>Interests:</strong> Travel, Geography, Cultures, Data</li>
+      </ul>
+    </section>
 
-  <section id="favorites">
-    <h2 class="section-title">My Favorite...</h2>
-    <ul>
-      <li>Cuisine (other than Mexican): Korean</li>
-      <li>Sport: College Football</li>
-      <li>Show: Naruto</li>
-      <li>Season: Winter</li>
-      <li>Artist: <a href="https://www.youtube.com/channel/UC0BletW9phE4xHFM44q4qKA" target="_blank">Juice WRLD</a></li>
-      <li>Creative Outlet: Writing</li>
-      <li>Hobby: Gym & Cycling</li>
-      <li>Cryptid: Bigfoot</li>
-    </ul>
-  </section>
+    <section class="section" id="resume">
+      <h2>Resume</h2>
+      <p>View my full resume below:</p>
+      <a href="Resume.pdf" class="resume-button" target="_blank">View Resume</a>
+    </section>
 
-  <section id="why-aa">
-    <h2 class="section-title">Why American Airlines???</h2>
-    <p>Working for American Airlines would be a tremendous honor, not only because it is one of the largest airlines in the world, but also because I really appreciate the essential role it plays in our everyday lives. Without modern air travel, we would have to rely on ships to reach faraway places, just as explorers like Magellan and Marco Polo once did centuries ago.</p>
-    <p>American Airlines connects people, families, and businesses across the globe, and I’m incredibly thankful for the accessibility and reliability they offer. Being part of a company that has such a massive, positive impact on so many lives would be something I take immense pride in.</p>
-    <p>Beyond my admiration for American Airlines’ global presence, what truly draws me to the company is a genuine curiosity and eagerness to learn more about the airline industry as a whole. I’ve always had a strong passion for geography and global connectivity, which closely aligns with the mission and impact of aviation. My global mindset naturally led me to American Airlines, and I’m excited by the opportunity to deepen my understanding across all facets of the business — from operations and logistics to branding, marketing, and digital strategy.</p>
-    <p>What also draws me to AA is its rich and diverse workforce. The company is a true reflection of a global community—a melting pot of cultures, backgrounds, and languages. Working alongside individuals from all over the world is not only inspiring, but it also creates an engaging and dynamic environment where I know I’ll thrive. The idea of learning from and collaborating with people of different experiences is a huge motivation for me. I’m excited by the opportunity to grow both professionally and personally while contributing to a company whose values resonate so strongly with my own.</p>
-  </section>
 
-  <section id="resume">
-    <h2 class="section-title">Resume</h2>
-    <p>Below is my resume. Feel free to take a gander at it. I would appreciate any advice or feedback on how I can make it better!</p>
-    <a href="Resume.pdf" title="What U Came Here 4" target="_blank">
-      <button>Resume</button>
-    </a>
-  </section>
+    <section class="section" id="aa">
+      <h2>Why American Airlines</h2>
+      <p>I’m drawn to American Airlines because of its global impact, inclusive workforce, and innovative spirit. With a lifelong passion for geography and international connectivity, I’m excited about the opportunity to contribute to a brand that connects people and cultures every day.</p>
+      <p>From operational strategy to digital transformation, I want to be part of a mission that aligns with my values — one that supports community, innovation, and progress on a global scale.</p>
+    </section>
 
-  <section id="goals">
-    <h2 class="section-title">Goals In Life</h2>
-    <ul>
-      <li>Support my family</li>
-      <li>Find my soulmate and have kids</li>
-      <li>Give back to the community</li>
-      <li>Travel the world</li>
-      <li>Buy land to build a house</li>
-      <li>To live</li>
-    </ul>
-  </section>
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:ronaldo.rosas@tcu.edu">ronaldo.rosas@tcu.edu</a></p>
+      <p>Phone: (817) 600-2507</p>
+    </section>
 
-  <section id="comedy">
-    <h2 class="section-title">Comedian Recommendations</h2>
-    <p>Below are a couple of short stand up clips that I find funny and hope you do too.</p>
-
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/HyH9Ty08dIM?si=OuUUcCusyFRmbsQI"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen></iframe>
-    </div>
-
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/C-kNsKz0kQc?si=pBrL87iTS1HGSlPV"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen></iframe>
-    </div>
-  </section>
-
-  <div class="flight-map-container">
-    <h2 class="section-title">Live Air Traffic Around the World</h2>
-    <iframe src="https://www.flightradar24.com/simple_index.php" loading="lazy"></iframe>
+    <section class="section">
+      <h2>Live Flight Map</h2>
+      <iframe src="https://www.flightradar24.com/simple_index.php" title="Live Flight Map" loading="lazy"></iframe>
+    </section>
   </div>
 
   <footer>
-    &copy; 2025 Ronaldo Rosas. Designed with ❤️ for American Airlines.
+    &copy; 2025 Ronaldo Rosas. Designed with passion for American Airlines.
   </footer>
-
 </body>
 </html>
